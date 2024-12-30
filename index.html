@@ -3,11 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Website</title>
+    <title>Altersverifikation</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('mainpage-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .verification, .content {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .categories a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .categories a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="verification">
+    <div class="verification blur">
         <h1>Altersverifikation</h1>
         <p>Diese Website enthält Inhalte für Erwachsene. Sind Sie über 18 Jahre alt?</p>
         <button id="yesButton">Ja, ich bin über 18</button>
@@ -23,6 +85,22 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const verificationDiv = document.querySelector('.verification');
+        const contentDiv = document.querySelector('.content');
+
+        yesButton.addEventListener('click', () => {
+            verificationDiv.classList.add('hidden');
+            contentDiv.classList.remove('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        noButton.addEventListener('click', () => {
+            alert('Sie können diese Website nicht betreten.');
+            window.location.href = 'https://www.google.com';
+        });
+    </script>
 </body>
 </html>
