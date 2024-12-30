@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainpage Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .categories {
+            display: flex;
+            gap: 20px;
+        }
+
+        .category {
+            background-color: #d3d3d3;
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .category:hover {
+            background-color: #a9a9a9;
+        }
+
+        .category h2 {
+            margin: 0;
+            color: #000;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .category:hover h2 {
+            color: #f4f4f4;
+        }
+
+        .category p {
+            margin: 10px 0 0;
+            color: transparent;
+            font-size: 14px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .category:hover p {
+            color: #d3d3d3;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Willkommen auf meiner Website</h1>
+    <div class="categories">
+        <div class="category">
+            <h2>Chatting</h2>
+            <p>Chatte und erhalte Fotos von anderen Personen.</p>
+        </div>
+        <div class="category">
+            <h2>Bilder & Videos</h2>
+            <p>Teile und entdecke spannende Medieninhalte.</p>
+        </div>
+        <div class="category">
+            <h2>Editing</h2>
+            <p>Bearbeite und optimiere deine Inhalte kreativ.</p>
+        </div>
+    </div>
+</body>
+</html>
