@@ -1,0 +1,7 @@
+my-website/
+├── server.js        // Backend-Server
+├── public/
+│   ├── index.html   // Frontpage
+│   ├── styles.css   // CSS-Datei für das Design
+│   └── script.js    // JavaScript-Datei für Interaktivität
+├── package.json     // Abhängigkeiten
