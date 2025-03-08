@@ -16,12 +16,21 @@
             background-color: #f4f4f4;
             height: 100vh;
             justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('backpic.png'); /* Hintergrundbild hinzufügen */
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             filter: blur(5px); /* Hintergrundbild leicht blurren */
-            overflow: hidden;
+            z-index: -1; /* Hintergrund hinter den Inhalt legen */
         }
 
         .content-wrapper {
@@ -89,6 +98,7 @@
     </style>
 </head>
 <body>
+    <div class="background"></div> <!-- Hintergrundbild-Element -->
     <div class="content-wrapper">
         <h1>Willkommen auf meiner Website</h1>
         <div class="categories">
