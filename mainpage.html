@@ -16,6 +16,25 @@
             background-color: #f4f4f4;
             height: 100vh;
             justify-content: center;
+            background-image: url('backpic.png'); /* Hintergrundbild hinzufügen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(5px); /* Hintergrundbild leicht blurren */
+            overflow: hidden;
+        }
+
+        .content-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Halbtransparenter Hintergrund für die Textfelder */
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .categories {
@@ -70,19 +89,21 @@
     </style>
 </head>
 <body>
-    <h1>Willkommen auf meiner Website</h1>
-    <div class="categories">
-        <div class="category">
-            <h2>Chatting</h2>
-            <p>Chatte und erhalte Fotos von anderen Personen.</p>
-        </div>
-        <div class="category">
-            <h2>Bilder & Videos</h2>
-            <p>Teile und entdecke spannende Medieninhalte.</p>
-        </div>
-        <div class="category">
-            <h2>Editing</h2>
-            <p>Bearbeite und optimiere deine Inhalte kreativ.</p>
+    <div class="content-wrapper">
+        <h1>Willkommen auf meiner Website</h1>
+        <div class="categories">
+            <div class="category">
+                <h2>Chatting</h2>
+                <p>Chatte und erhalte Fotos von anderen Personen.</p>
+            </div>
+            <div class="category">
+                <h2>Bilder & Videos</h2>
+                <p>Teile und entdecke spannende Medieninhalte.</p>
+            </div>
+            <div class="category">
+                <h2>Editing</h2>
+                <p>Bearbeite und optimiere deine Inhalte kreativ.</p>
+            </div>
         </div>
     </div>
 </body>
