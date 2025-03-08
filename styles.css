@@ -80,3 +80,53 @@ button:hover {
     padding: 20px;
     box-sizing: border-box;
 }
+
+.categories {
+    display: flex;
+    gap: 20px;
+}
+
+.category {
+    background-color: #d3d3d3;
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.category:hover {
+    background-color: #a9a9a9;
+}
+
+.category h2 {
+    margin: 0;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+.category:hover h2 {
+    color: #f4f4f4;
+}
+
+.category p {
+    margin: 10px 0 0;
+    color: transparent;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.category:hover p {
+    color: #d3d3d3;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
